@@ -21,6 +21,9 @@ cluster:
     ssh_port: 22
   kube_apiserver:
     option_overrides: {}
+  kubelet:
+    option_overrides:
+      fail-swap-on: false
 docker:
   storage:
     direct_lvm:                          # Configure devicemapper in direct-lvm mode (RHEL/CentOS only).
