@@ -19,7 +19,7 @@ Vagrant.configure(2) do |config|
         'sql_server' => {
           'accept_eula' => true,
           'server_sa_password' => 'bxcr@dm!Npaas',
-          'version' => '2012',
+          'version' => '2016',
           'instance_name' => 'MSSQLSERVER',
           'update_enabled' => false
         }
