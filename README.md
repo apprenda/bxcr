@@ -5,8 +5,8 @@ bxcr is a small Apprenda Cloud Platform environment that can be brought up using
 ## Prerequisites
 
 These are the versions this has been tested on, but it _should_ work with any recent version of Vagrant and VirtualBox
-* Vagrant 1.9.6
-* VirtualBox 5.1.22
+* Vagrant 2.0.1
+* VirtualBox 5.2
 
 You should have at least *16 GB* of RAM available to run these boxes.
 
