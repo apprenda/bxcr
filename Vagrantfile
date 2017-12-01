@@ -2,6 +2,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.define "apprenda-windows", primary: true do |node|
     node.vm.box = 'apprenda/windows2012r2'
+    node.vm.box_version = "1.1.2"
     node.vm.communicator = 'winrm'
     node.vm.network 'forwarded_port', host: 33199, guest: 3389
     node.vm.network 'private_network', ip: '172.16.0.10'
@@ -15,16 +16,6 @@ Vagrant.configure(2) do |config|
     node.vm.provision 'file', source: './certs/apprendassl.pfx', destination: 'C:\\users\\vagrant\\apprendassl.pfx'
     node.vm.provision 'chef_solo' do |chef|
       chef.cookbooks_path = ['chef/berks-cookbooks', 'chef/cookbooks']
-      chef.json = {
-        'sql_server' => {
-          'accept_eula' => true,
-          'server_sa_password' => 'bxcr@dm!Npaas',
-          'version' => '2016',
-          'instance_name' => 'MSSQLSERVER',
-          'update_enabled' => false
-        }
-      }
-      chef.add_recipe "sql_server::server"
       chef.add_recipe "apprenda::setup"
     end
     node.vm.provision 'shell', path: "./scripts/ps/Configure-SQL.ps1"

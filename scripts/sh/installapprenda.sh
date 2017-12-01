@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /apprenda/repo/sys/8.0.0/System/Nodes/RPM && ls | xargs rpm -Uvh
+cd /apprenda/repo/sys/*/System/Nodes/RPM && ls | xargs rpm -Uvh
 
 # reset secret password
 OUT="$(curl -X POST -k -s --header "Content-type: application/json" -d '{"username":"bxcr@apprenda.com","password":"password"}' https://apps.apprenda.bxcr/authentication/api/v1/sessions/soc | jq '.apprendaSessionToken')"
