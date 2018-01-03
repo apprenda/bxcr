@@ -2,7 +2,6 @@ DEPENDENCIES
   chocolatey
   docker
   iis
-  ms_dotnet
   ntp
   seven_zip
   sql_server
@@ -15,8 +14,6 @@ GRAPH
   docker (2.15.6)
   iis (6.5.0)
     windows (>= 2.0)
-  ms_dotnet (3.2.1)
-    windows (>= 1.36.1)
   ntp (3.4.0)
   ohai (5.1.0)
   seven_zip (2.0.2)

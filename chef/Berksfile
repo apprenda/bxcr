@@ -1,7 +1,6 @@
 source "https://supermarket.chef.io"
 
 cookbook 'iis'
-cookbook 'ms_dotnet'
 cookbook 'chocolatey'
 cookbook 'webpi'
 cookbook 'windows'
