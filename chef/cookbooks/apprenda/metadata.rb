@@ -8,5 +8,4 @@ version '0.1.0'
 depends "windows"
 depends "webpi"
 depends "iis"
-depends "ms_dotnet"
 depends "chocolatey"
