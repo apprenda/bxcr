@@ -34,6 +34,7 @@ Vagrant.configure(2) do |config|
 
     node.vm.provision 'chef_solo' do |chef|
       chef.cookbooks_path = ['chef/berks-cookbooks', 'chef/cookbooks']
+      chef.version = '13.8.5'
       chef.json = {
         'apprenda_linux' => {
           'hostname' => 'apprlin',
